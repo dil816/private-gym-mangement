@@ -1,10 +1,10 @@
 import { useAuthContext } from "./useAuthContext";
 //final step work
-import { useWorkoutContext } from "./useWorkoutContext";
+import { useWorkoutsContext } from "../hooks/useWorkoutContext";
 
 const useLogout = () => {
   const { dispatch } = useAuthContext();
-  const { dispatch: workoutsDispatch } = useWorkoutContext();
+  const { dispatch: workoutsDispatch } = useWorkoutsContext();
 
   const logout = () => {
     // remove user from storage
