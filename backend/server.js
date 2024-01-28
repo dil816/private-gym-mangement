@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import mongoose from "mongoose";
 import workOutRoute from "./routes/workouts.js";
+import userRoutes from "./routes/user.js";
 import cors from "cors";
 
 // express app
@@ -17,6 +18,7 @@ app.use((req, res, next) => {
 
 // rotes
 app.use("/api/workouts", workOutRoute);
+app.use("/api/user", userRoutes);
 
 // Connect to the DB
 mongoose
